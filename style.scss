@@ -1,0 +1,67 @@
+// Global Styles
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+// Main Styles
+
+.main {
+    width: 100%;
+    height: 100%;
+    background: #161616;
+    display: grid;
+    background-size: 2rem 2rem;
+    background-position: 1rem 1rem;
+    background-color: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+@for $i from 1 through 12 {
+    :nth-child(#{$i}) {
+        top:(1rem*$i);
+        animation-delay: (.1s*$i);
+    }
+}
+}
+
+i {
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid slateblue;
+    line-height: 4rem;
+    font-size: 4rem;
+    color: slateblue;
+    margin: 2rem;
+    animation: animationTest 10s linear forwards infinite;
+    position: absolute;
+    width: 24rem;
+    height: 2rem;
+}
+
+@keyframes animationTest {
+    0%, 100% {
+        transform: rotate(0deg);
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+        transform: rotateZ(360deg);
+    }
+}
+
+
